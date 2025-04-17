@@ -1,0 +1,379 @@
+/* ===== General Styles ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f2f5f1;
+  color: #333;
+  line-height: 1.6;
+}
+
+.main-logo {
+  height: 50px;
+  width: 50px;
+  background-image: url('../assets/logo.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #9fb699;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+nav > a {
+  text-decoration: none; /* Menghapus garis bawah pada link */
+  color: #f5f4f4; /* Warna teks hitam gelap, lebih lembut dari 'black' */
+  border: 1px solid #6F826A; /* Border warna biru terang */
+  padding: 4px 4px; /* Memberikan ruang di sekitar teks agar lebih nyaman */
+  border-radius: 5px; /* Memberikan sudut border yang melengkung */
+  transition: all 0.3s ease; /* Animasi transisi smooth saat hover */
+  margin-right: 10px;
+}
+
+nav > a:hover {
+  background-color: #8aa270; /* Memberikan warna latar saat hover */
+  color: whitesmoke; /* Warna teks biru terang saat hover */
+  border-color: #BBD8A3; /* Menyesuaikan border dengan warna teks saat hover */
+}
+
+.banner-img {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+main > section {
+  height: 850px;
+}
+
+#our-profile-section {
+  text-align: left;
+  padding: 20px;
+}
+
+.profile-photo {
+  display: inline-block;
+  margin: 10px;
+}
+
+.profile-photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+}
+
+.profile-photo p {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+/* Message Us */
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* FORM */
+form {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #8aa270;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  margin-top: 10px;
+  font-weight: 600;
+  color: whitesmoke;
+}
+
+form input,
+form select,
+form textarea {
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #b5ac5d;
+  font-size: 14px;
+  background-color: #fffbea;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #a89e4a;
+  box-shadow: 0 0 4px rgba(165, 182, 141, 0.6);
+  outline: none;
+}
+
+/* BUTTON */
+form button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #A5B68D;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #706D54;
+}
+
+/* RESULT BOX */
+.form-result {
+  flex: 1;
+  min-width: 300px;
+  background-color: #8aa270;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: whitesmoke;
+}
+
+.form-result h3 {
+  margin-bottom: 15px;
+  color: white;
+}
+
+.form-result p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+/* ===== Flexibel Layout untuk Mode Ponsel ===== */
+
+/* 1. Header responsif (Menata ulang logo dan navigasi) */
+@media (max-width: 768px) {
+  .main-header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 0;
+  }
+
+  /* Logo menjadi lebih kecil dan center */
+  .main-logo {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+  }
+
+  /* Navigasi responsif */
+  nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  nav > a {
+      margin-bottom: 10px; /* Menambahkan margin antar link */
+      padding: 8px 0;
+      text-align: center;
+      width: 100%;
+  }
+
+  nav > a:hover {
+      background-color: #6F826A; /* Menggunakan warna tema */
+  }
+}
+
+/* 2. Banner gambar responsif */
+@media (max-width: 768px) {
+  .banner-img {
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+  }
+}
+
+/* 3. Profil photo (menyusun profile secara vertikal) */
+@media (max-width: 768px) {
+  #our-profile-section {
+      text-align: center;
+  }
+
+  .profile-photo {
+      display: block;
+      margin: 20px auto;
+  }
+
+  .profile-photo img {
+      width: 120px;
+      height: 120px;
+  }
+}
+
+/* 4. Formulir responsif (menyusun form dan result box secara vertikal) */
+@media (max-width: 768px) {
+  .form-container {
+      flex-direction: column;
+      gap: 2rem;
+  }
+
+  form,
+  .form-result {
+      max-width: 100%;
+      width: 100%;
+  }
+
+  /* Mengurangi jarak pada input dan textarea pada mobile */
+  form input,
+  form select,
+  form textarea {
+      margin-top: 8px;
+      font-size: 14px;
+  }
+
+  form button {
+      margin-top: 15px;
+  }
+}
+
+/* 5. Responsif untuk semua section (agar panjangnya menyesuaikan konten) */
+@media (max-width: 768px) {
+  main > section {
+      padding: 20px;
+      height: auto; /* Menghapus tinggi tetap untuk mobile */
+  }
+}
+
+/* 6. Portofolio section */
+@media (max-width: 768px) {
+  #portofolio-section article {
+      padding: 20px;
+      text-align: center;
+      max-width: 100%;
+  }
+}
+
+/* 7. Footer responsif */
+@media (max-width: 768px) {
+  footer {
+      padding: 15px 0;
+  }
+}
+
+
+
+/* prtofolio */
+
+#portofolio-section {
+  text-align: left;
+  padding: 20px;
+}
+
+
+/* message us */
+#message-us-section {
+  text-align: left;
+  padding: 20px;
+}
+
+/* home */
+
+#home-section {
+  text-align: left;
+  padding: 20px;
+}
+
+
+
+
+/* style footer */
+
+/* Styling Footer */
+footer {
+  background-color: #41644A; /* Warna latar belakang gelap */
+  color: #fff; /* Warna teks putih */
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #8aa270; /* Ganti warna saat hover */
+}
+
+.footer-info {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.footer-info p {
+  margin: 5px 0;
+}
+
+.footer-info span {
+  color: red; /* Warna hati */
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-info {
+      font-size: 12px;
+  }
+
+  .footer-links ul li {
+      margin-bottom: 8px;
+  }
+}
