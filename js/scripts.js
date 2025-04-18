@@ -27,11 +27,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const banner = document.querySelector('.banner-img');
 
     const images = [
-        '../assets/gambar10.jpg',
-        '../assets/lab13.jpg',
-        '../assets/gambar9.jpg',
-        '../assets/lab12.jpg',
-        '../assets/gambar8.jpg'
+        'assets/gambar10.jpg',
+        'assets/lab13.jpg',
+        'assets/gambar9.jpg',
+        'assets/lab12.jpg',
+        'assets/gambar8.jpg'
     ];
 
     let index = 0;
